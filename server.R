@@ -105,8 +105,7 @@ shinyServer(
     number_t_test <- reactive({ceiling(power.t.test(delta=input$lift_t_test,
                                                     sd=input$sd_t_test,
                                                     sig.level=1-numsif_t_test(), 
-                                                    power=0.8,
-                                                    strict = TRUE)[[1]])
+                                                    power=0.8)[[1]])
     })
     
     output$liftText_t_test <- renderText({
