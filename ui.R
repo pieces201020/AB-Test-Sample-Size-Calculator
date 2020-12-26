@@ -15,9 +15,9 @@ shinyUI(fluidPage(
       helpText("例如：如果原始指标为5%, 输入5。"
       ),
       hr(),
-      numericInput("lift_prop_test", label = "最小可检测相对提升", value = 5,
+      numericInput("lift_prop_test", label = "最小可检测相对提升", value = 10,
                    min = 0, step=1),
-      helpText("最小可检测相对提升指的是通过A/B测试可以检测到指标最小的相对提升"
+      helpText("最小可检测相对提升指的是通过A/B测试可以检测到指标最小的相对提升,如果最小可检测相对提升为10%，输入10"
       ),
       helpText("例如：如果原始指标为5%，只有当实验组指标提升到6%时你才决定是实施A/B测试中的改变，那么此时的最小可检测相对提升就是20% ((6% - 5%) / 5%)。"
       ),
